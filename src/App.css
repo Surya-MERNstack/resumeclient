@@ -1,0 +1,212 @@
+/* Default styles for large screens (width > 800px) */
+.App {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.container {
+  background-color: #f7f7f7;
+  margin-top: 3rem;
+}
+
+.resume-container {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  width: 800px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.controls label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.left-column {
+  width: 50%;
+  padding: 20px;
+  cursor: grabbing; /* Cursor style for draggable items */
+}
+
+.education h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.A4-sheet {
+  width: 50%;
+  padding: 3px;
+  position: relative;
+  text-align: start;
+  cursor: grabbing; /* Cursor style for draggable items */
+}
+
+.work-experience h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.user {
+  background-color: white;
+  padding: 5px;
+  margin: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.user:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Background color styles */
+.white-background {
+  background-color: white;
+}
+
+.lightgrey-background {
+  background-color: lightgrey;
+}
+
+.lightblue-background {
+  background-color: lightblue;
+}
+
+/* Update these styles in your existing CSS */
+
+/* Total A4 sheet container */
+.total_A4 {
+  text-align: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 70%;
+  height: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Selected data container */
+.selected-education,
+.selected-work-experience {
+  flex: 1;
+  padding: 20px;
+  height: 100%;
+}
+
+/* Resume heading style */
+.selected-education h3,
+.selected-work-experience h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Ensure the selected data occupies the full height */
+.selected-education,
+.selected-work-experience {
+  height: 100%;
+  flex: 1;
+  padding: 10px;
+}
+
+.total_box {
+  border: 2px solid white;
+  height: 37rem;
+  width: 20rem;
+  display: flex;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  overflow-x: scroll;
+  font-size: small;
+}
+
+/* Media query for screens smaller than 898px (adjust layout) */
+@media (max-width: 898px) {
+  .App {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .total_box {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+/* Media query for screens smaller than 800px (adjust layout and font size) */
+@media (max-width: 800px) {
+  .App {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container {
+    margin-top: 1rem;
+  }
+
+  .resume-container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .controls {
+    margin-right: 10px;
+  }
+
+  .education h3,
+  .work-experience h3 {
+    font-size: 16px;
+  }
+
+  .user {
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .total_box {
+    height: auto;
+  }
+
+  .selected-education h3,
+  .selected-work-experience h3 {
+    font-size: 16px;
+  }
+}
+
+/* Media query for screens smaller than 600px (mobile devices) */
+@media (max-width: 600px) {
+  .App {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container {
+    margin-top: 0.5rem;
+  }
+
+  .resume-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .controls {
+    margin-right: 0;
+  }
+
+  .user {
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .total_box {
+    height: auto;
+  }
+
+  .selected-education h3,
+  .selected-work-experience h3 {
+    font-size: 14px;
+  }
+}
