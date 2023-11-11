@@ -174,15 +174,6 @@ const App = () => {
           *swap the container it automatically chooses the Education and Work
           Experience*
         </span>
-        {selectedEducation && (
-          <div className="selected-education">
-            <u>
-              {" "}
-              <h3>Selected Education</h3>
-            </u>
-            <SortableUser user={selectedEducation} />
-          </div>
-        )}
         {selectedWorkExperience && (
           <div
             className="selected-work-experience"
@@ -195,6 +186,16 @@ const App = () => {
             <SortableUser user={selectedWorkExperience} />
           </div>
         )}
+        {selectedEducation && (
+          <div className="selected-education">
+            <u>
+              {" "}
+              <h3>Selected Education</h3>
+            </u>
+            <SortableUser user={selectedEducation} />
+          </div>
+        )}
+       
       </div>
 
       <div className="controls">
